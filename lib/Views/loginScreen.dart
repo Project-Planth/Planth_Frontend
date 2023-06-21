@@ -16,9 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final height = MediaQuery.sizeOf(context).height;
     final width = MediaQuery.sizeOf(context).width;
     return Scaffold(
-      backgroundColor: AppTheme.lightColorScheme.background,
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
             height: height / 20,
@@ -47,11 +45,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     labelText: "Email",
                     prefixIcon: Icon(
                       Icons.person,
-                      color: AppTheme.lightColorScheme.tertiary,
                     ),
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: AppTheme.lightColorScheme.primary),
+                      borderSide: BorderSide(),
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
@@ -64,11 +60,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   controller: passController,
                   decoration: InputDecoration(
                     labelText: "Password",
-                    prefixIcon: Icon(Icons.lock,
-                        color: AppTheme.lightColorScheme.tertiary),
+                    prefixIcon: const Icon(Icons.lock,),
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: AppTheme.lightColorScheme.primary),
+                      borderSide: BorderSide(),
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
@@ -78,20 +72,9 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           OutlinedButton(
             onPressed: () {},
-            style: ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(
-                  AppTheme.lightColorScheme.background),
-              overlayColor:
-                  MaterialStatePropertyAll(AppTheme.lightColorScheme.primary),
-              shape: MaterialStatePropertyAll(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                ),
-              ),
-            ),
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: width/3.5,vertical: 10),
-              child: Text(
+              child: const Text(
                 'Login',
                 style: AppTheme.login,
               ),

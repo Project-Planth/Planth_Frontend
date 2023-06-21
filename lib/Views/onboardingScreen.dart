@@ -9,7 +9,6 @@ class OnboardingScreen extends StatelessWidget {
     final height = MediaQuery.sizeOf(context).height;
     final width = MediaQuery.sizeOf(context).width;
     return Scaffold(
-      backgroundColor: AppTheme.lightColorScheme.background,
       body: Column(children: [
         Container(
           //Image
@@ -33,19 +32,15 @@ class OnboardingScreen extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        TextButton(
+        FilledButton(
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/login');
           },
-          style: ButtonStyle(
-              backgroundColor:
-                  MaterialStatePropertyAll(AppTheme.lightColorScheme.primary)),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 35),
+          child: const Padding(
+            padding: EdgeInsets.symmetric(vertical: 3, horizontal: 35),
             child: Text(
               'Get Started',
               style: TextStyle(
-                  color: AppTheme.lightColorScheme.background,
                   fontFamily: 'Roboto-Medium.ttf',
                   fontWeight: FontWeight.w500,
                   fontSize: 23),

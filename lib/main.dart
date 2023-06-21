@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme:
           ThemeData(useMaterial3: true, colorScheme: AppTheme.lightColorScheme),
       darkTheme:
-          ThemeData(useMaterial3: true, colorScheme: AppTheme.lightColorScheme),
+          ThemeData(useMaterial3: true, colorScheme: AppTheme.darkColorScheme),
       routes: {
         '/splash': (context) => const SplashScreen(),
         '/': (context) => const OnboardingScreen(),
