@@ -3,10 +3,11 @@ import 'package:plant_h/Views/loginScreen.dart';
 import 'package:plant_h/Views/onboardingScreen.dart';
 import 'package:plant_h/Views/splashScreen.dart';
 import 'Utils/appTheme.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/splash': (context) => const SplashScreen(),
         '/': (context) => const OnboardingScreen(),
-        '/login':(context) => LoginScreen(),
+        '/login': (context) => const LoginScreen(),
       },
       initialRoute: '/splash',
     );
