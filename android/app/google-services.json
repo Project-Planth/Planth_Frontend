@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "652748477502",
+    "project_id": "project-planth",
+    "storage_bucket": "project-planth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652748477502:android:c5740ac00d2eb85e15ad6f",
+        "android_client_info": {
+          "package_name": "com.example.plant_h"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652748477502-mpgt2vth2ef2mob8ce83md76hid6i57s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plant_h",
+            "certificate_hash": "85ad8f546ad27444631875e3619cfa794104d47c"
+          }
+        },
+        {
+          "client_id": "652748477502-cbjs61tnq9hoendv6oqarcccdse23g7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgGEW4Ji_ACBGZnyAMx9UUwtSagswj3gE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652748477502-cbjs61tnq9hoendv6oqarcccdse23g7k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

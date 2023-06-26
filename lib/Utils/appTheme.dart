@@ -81,9 +81,23 @@ class AppTheme {
     fontWeight: FontWeight.w300,
     fontStyle: FontStyle.italic,
   );
+  static const TextStyle quotes3 = TextStyle(
+    fontSize: 37,
+    fontFamily: 'Roboto-Light',
+    fontWeight: FontWeight.w300
+  );
   static const TextStyle login = TextStyle(
     fontFamily: 'Roboto-Light.ttf',
     fontSize: 20,
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle googleLogin = TextStyle(
+    fontFamily: 'Roboto-Medium.ttf',
+    // fontWeight: FontWeight.w400,
+    fontSize: 18,
+    color: AppTheme.lightColorScheme.background
+  );
+  static InputDecoration signupForm = InputDecoration(
+
   );
 }

@@ -1,6 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:equatable/equatable.dart';
-
 import 'package:plant_h/shared/domain/models/response.dart';
 
 class AppException implements Exception {
