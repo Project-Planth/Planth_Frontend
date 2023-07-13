@@ -14,7 +14,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final emailController = TextEditingController();
   final passController = TextEditingController();
   final confPassController = TextEditingController();
+  Image? background;
 
+  @override
+  void initState() {
+    background=Image.asset('assets/images/signup_screen.jpg');
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    precacheImage(background!.image, context);
+    super.didChangeDependencies();
+  }
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.sizeOf(context).height;
@@ -26,7 +38,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             image: DecorationImage(
           colorFilter:
               ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.darken),
-          image: const AssetImage('assets/images/signup_screen.jpg'),
+          image: background!.image,
           fit: BoxFit.cover,
         )),
         child: Center(

@@ -142,19 +142,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 crossAxisAlignment: CrossAxisAlignment.baseline,
                 textBaseline: TextBaseline.alphabetic,
                 children: [
-                  Text(
+                  const Text(
                     "Didn't have an account?",
                   ),
                   TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/signup');
                     },
-                    child: Text(
+                    child: const Text(
                       'SignUp',
                     ),
                   )
                 ],
-              )
+              ),
+              TextButton(onPressed: () async{
+                  await authRepository.anonymousUser();
+                  Navigator.pushNamed(context, '/community');
+                }, child: Text("Skip Now>>"))
             ],
           ),
         );

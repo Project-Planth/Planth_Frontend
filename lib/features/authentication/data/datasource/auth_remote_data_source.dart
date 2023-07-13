@@ -10,6 +10,7 @@ abstract class AuthDataSource {
       {required String email, required String password});
 
   Future<Either<AppException, String>> googleLoginUser();
+  Future<Either<AppException,User>> anonymousUser();
 
   Future<Either<AppException, String>> signupUser(
       {required String firstName,
@@ -95,5 +96,35 @@ class AuthRemoteDataSource implements AuthDataSource {
         r.toString(),
       ),
     );
+  }
+
+  @override
+  Future<Either<AppException, User>> anonymousUser() async {
+    try {
+      final eitherType = await networkService.post(
+        EndPoint.anonymous
+      );
+      return eitherType.fold(
+            (exception) {
+          return Left(exception);
+        },
+            (response) {
+          final user = User.fromJson(response.data);
+          networkService.updateHeader(
+            {'Authorization': user.token},
+          );
+
+          return Right(user);
+        },
+      );
+    } catch (e) {
+      return Left(
+        AppException(
+          message: 'Unknown error occured',
+          statusCode: 1,
+          identifier: '${e.toString()}\nLoginUserRemoteDataSource.loginUser',
+        ),
+      );
+    }
   }
 }

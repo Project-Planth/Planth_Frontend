@@ -32,4 +32,9 @@ class AuthRepositoryImpl extends AuthRepository {
         email: email,
         password: password);
   }
+
+  @override
+  Future<Either<AppException, User>> anonymousUser() {
+    return authDataSource.anonymousUser();
+  }
 }

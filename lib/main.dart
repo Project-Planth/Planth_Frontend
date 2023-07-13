@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:plant_h/Views/onboardingScreen.dart';
 import 'package:plant_h/Views/splashScreen.dart';
 import 'package:plant_h/features/authentication/presentation/signupScreen.dart';
+import 'package:plant_h/features/community/presentation/community_screen.dart';
 import 'Utils/appTheme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -29,8 +30,9 @@ class MyApp extends StatelessWidget {
         '/': (context) => const OnboardingScreen(),
         '/login': (context) => const LoginScreen(),
         '/signup':(context) => SignUpScreen(),
+        '/community':(context) => CommunityScreen()
       },
-      initialRoute: '/splash',
+      initialRoute: '/community',
     );
   }
 }
